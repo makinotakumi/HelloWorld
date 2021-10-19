@@ -1,0 +1,26 @@
+<p *ngIf="isDisplay">構造ディレクティブ{{str}}</p>
+<button (click)="onClicked(true)">show</button>
+<button (click)="onClicked(false)">hide</button>
+<div class="line"></div>
+<ul>
+    <li *ngFor="let c of colorString">
+        <p [style.color]="c.color">{{c.color}}</p>
+        <p>{{c.strlen}}</p>
+    </li>
+</ul>
+<div [ngSwitch]="paturn">
+    <div *ngSwitchCase="1">✋</div>
+    <div *ngSwitchCase="2">✌</div>
+    <div *ngSwitchDefault>✊</div>
+    <button (click)="onClickedPaturn()">click</button>
+</div>
+<div class="line"></div>
+<input #dt (keyup)="onKeyup(dt.value)">
+<p>{{str1}}</p>
+<button [ngClass]="onButtonClass">OK</button>
+<div class="line"></div>
+<h1><span [ngStyle]="helloStyle">Hello</span></h1>
+<div>
+    <button (click)="onClick('red', '16px')">Red</button>
+    <button (click)="onClick('blue', '32px')">Blue</button>
+</div>

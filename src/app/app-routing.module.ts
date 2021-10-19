@@ -1,7 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [];
+import { RectComponent } from './rect/rect.component';
+import { DirectiveComponent } from './directive/directive/directive.component';
+
+const routes: Routes = [
+  { path:'', redirectTo: '/', pathMatch:'full'},
+  { path:'rect', component: RectComponent},
+  { path:'directive', component: DirectiveComponent},
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

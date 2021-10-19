@@ -1,0 +1,26 @@
+<div>
+    <h1>{{ip}}</h1>
+    <div class="line"></div>
+    <p><input class='a' [value]="pb"></p>
+    <div class="line"></div>
+    <button  class='a' (click)="onClicked($event)" [value]="eb" value="a">{{eb}}</button>
+    <h1>{{eb}}</h1>
+    <div class="line"></div>
+    <button [class.display]="isDisplay">[class.クラス名]="変数"←クラスバインディング</button>
+    <button  class='a' (click)="onClicked2()">2</button>
+    <div class="line"></div>
+    <button [style.color]="isColor" (click)="onClicked3()">[style.属性名]="変数"←スタイルバインディング</button>
+    <div class="line"></div>
+    <p>テンプレート参照変数  input #trv1 type="text" (keyup)="onKeyup(trv1.value)"</p>
+    <p>{{text}}</p>
+    <input #trv1 type="text" (keyup)="onKeyup(trv1.value)">
+    <div class="line"></div>
+    <p>ngModel</p>
+    <p>id</p>
+    <input tyep="text"  [(ngModel)]="product.id">
+    {{product.id}}
+    <p>name</p>
+    <input tyep="text" [(ngModel)]="product.name">
+    {{product.name}}
+</div>
+
