@@ -7,20 +7,26 @@ import { AppComponent } from './app.component';
 import { RectComponent } from './rect/rect.component';
 import { DirectiveComponent } from './directive/directive/directive.component';
 import { MenuComponent } from './menu/menu/menu.component';
+import { EmployeeComponent } from './employee/employee.component';
+import { PipeComponent } from './pipe/pipe/pipe.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RectComponent,
     DirectiveComponent,
-    MenuComponent
+    MenuComponent,
+    EmployeeComponent,
+    PipeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
